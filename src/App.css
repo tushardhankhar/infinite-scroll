@@ -5,6 +5,16 @@
   padding: 1rem;
 }
 
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: darkcyan;
+  color: black;
+}
+
 input {
   padding: 0.6rem;
   width: 45rem;
@@ -17,4 +27,10 @@ button {
   border-radius: 0.5rem;
   margin-left: 2rem;
   border: none;
+}
+
+#theme-logo{
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
 }

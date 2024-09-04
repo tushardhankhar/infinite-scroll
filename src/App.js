@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Books from './components/Book';
+import "./App.css";
+import Books from "./components/Book";
+import { ThemeContext } from "./context/themeContext";
+import NavBar from "./components/NavBar";
+import { useContext } from "react";
 
 function App() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="App">
-     <Books />
-    </div>
+      <div className={`App ${theme === "light" ? "light" : "dark"}`}>
+        <NavBar />
+        <Books />
+      </div>
   );
 }
 

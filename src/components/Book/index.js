@@ -1,5 +1,12 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, {
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+  useContext,
+} from "react";
 import useBookSearch from "../../hooks/useBookSearch";
+import { ThemeContext } from "../../context/themeContext";
 
 export default function Books() {
   const [search, setSearch] = useState("");
@@ -9,7 +16,8 @@ export default function Books() {
   function handleChange(e) {
     setSearch(e.target.value);
   }
-
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
   useEffect(() => {
     if (search === "") {
       setPage(1);
